@@ -59,6 +59,52 @@ namespace H.W_15___09._03_
 
 
 
+
+            //List
+            Console.WriteLine("\nList\n");
+            //Создаем List:
+
+            List<int> numbersList = new List<int>() { 5, 4, 3, 2, 1 };
+
+            //Добавляем элемент:
+            numbersList.Add(0);
+
+            //Добавляем массив int-ов в List:
+            int[] intArray = { 1, 2, 3, 4, 5 };
+            numbersList.AddRange(intArray);
+
+            //Удалаем элемент:
+            if (numbersList.Remove(1))//Удалит первую попавшую единицу
+            {
+                Console.WriteLine("Удаление прошло успешно");
+            }
+            else
+            {
+                Console.WriteLine("Данное число отсутвует");
+            }
+
+            //Удаляем по индексу:
+            numbersList.RemoveAt(0);
+
+
+            //Минимальный и Максимальный элемент List-a:
+            int min = numbersList.Min();
+            int max = numbersList.Max();
+            Console.WriteLine($"\nMin = {min}, Max = {max}\n");
+
+
+            //Выводим на консоль:
+            for (int i = 0; i < numbersList.Count; i++)
+            {
+                Console.Write($"{numbersList[i]} ");
+            }
+            Console.WriteLine();
+
+            foreach (var item in numbersList)
+            {
+                Console.Write($"{item} ");
+            }
+
         }
     }
 }
